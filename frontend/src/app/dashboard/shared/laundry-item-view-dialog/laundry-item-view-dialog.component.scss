@@ -1,0 +1,51 @@
+/* Custom styles for the form */
+
+.title {
+  padding: 20px;
+  text-align: center;
+  // color: #4CAF50; /* Green color */
+  color: #333;
+  font-size: 24px; /* Larger font size */
+}
+
+label {
+  font-weight: 500;
+  margin-left: 15px;
+  padding-bottom: 5px;
+  color: #4caf50; /* Dark gray color */
+  font-size: 16px;
+}
+
+.category {
+  font-size: 18px;
+  padding: 10px;
+  // text-align: center;
+  // width: 100px;
+}
+.categoryExamples {
+  font-size: 12px;
+  color: #333;
+}
+
+
+
+input[type="text"],
+input[type="number"],
+input[type="date"],
+select {
+  width: 100%;
+  padding: 10px 15px;
+  margin-bottom: 15px;
+  border: 1px solid #ccc;
+  border-radius: 40px;
+  font-size: 14px; /* Medium font size */
+  // max-width: fit-content;
+}
+.laundry input {
+  max-width: fit-content;
+}
+
+.total {
+  font-size: 24px;
+  font-weight: 600;
+}

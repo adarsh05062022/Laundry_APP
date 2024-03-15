@@ -1,0 +1,112 @@
+.innerWrapper {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  position: relative;
+
+  .feedbackButton {
+    position: absolute;
+    top: 5px;
+    right: 5px;
+    width: fit-content;
+  }
+}
+
+
+
+.pricing {
+  flex: 50%;
+  padding: 2rem !important;
+
+
+  .details{
+    display: flex;
+    padding: 15px;
+    position: relative;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+
+
+    .userDetails {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      // align-items: center;
+      // padding-top: 40px;
+      max-width: fit-content;
+  
+      
+  
+     
+    }
+
+    .inputFields {
+      padding: 10px;
+      display: flex;
+      flex-direction: column;
+      // align-items: center;
+
+      label {
+        min-width: 100px;
+        color: #4caf50;
+        font-size: 14px; 
+        padding-left: 5px;
+      }
+
+      input,
+      textarea {
+        width: 200px;
+        border-radius: 18px;
+        border: 1px solid aqua;
+        padding: 3px 10px;
+        font-size: 13px;
+      }
+      input {
+        height: 35px;
+      }
+    }
+
+    .editButton {
+      position: absolute;
+      top: 0;
+      left: 10%;
+      cursor: pointer;
+    }
+
+
+   
+  }
+
+  
+}
+
+.chart {
+  flex: 50%;
+
+  .chartInner{
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+
+    canvas {
+
+      width: clamp(200px,350px,400px) !important;
+      max-width: 400px;
+      max-height: 400px;
+    }
+  }
+
+  
+}
+
+
+@media screen and (max-width: 768px) {
+  canvas {
+    max-width: 400px;
+    max-height: 400px;
+  }
+}

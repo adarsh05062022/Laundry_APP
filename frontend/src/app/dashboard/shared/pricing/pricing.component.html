@@ -1,0 +1,49 @@
+<div class="container-fluid">
+  <div class="row">
+    <div class="col-md-12">
+      <h3 class="text-center">Pricing Table</h3>
+      <table class="table">
+        <thead>
+          <tr>
+            <th>Category</th>
+            <th>Upperwear (₵)</th>
+            <th>Lowerwear (₵)</th>
+            
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>Regular</td>
+            <td><input type="number" [disabled]="!isEditable" [(ngModel)]="prices.regular.upperwear" min="0"></td>
+            <td><input type="number" [disabled]="!isEditable"  [(ngModel)]="prices.regular.lowerwear" min="0"></td>
+          </tr>
+          <tr>
+            <td>Special</td>
+            <td><input type="number" [disabled]="!isEditable" [(ngModel)]="prices.special.upperwear" min="0"></td>
+            <td><input type="number" [disabled]="!isEditable" [(ngModel)]="prices.special.lowerwear" min="0"></td>
+          </tr>
+          <tr>
+            <td>Woolen</td>
+            <td><input type="number" [disabled]="!isEditable" [(ngModel)]="prices.woolen.upperwear" min="0"></td>
+            <td><input type="number" [disabled]="!isEditable" [(ngModel)]="prices.woolen.lowerwear" min="0"></td>
+          </tr>
+          <tr>
+            <td>Household</td>
+            <td><input type="number" [disabled]="!isEditable" [(ngModel)]="prices.household.item" min="0"></td>
+            <td></td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+  <div class="d-flex justify-content-end">
+    <ng-container *ngIf="isAdmin">
+      <button type="button" class="btn btn-dark" mdbRipple *ngIf="!isEditable; else buttonEditable" (click)="onEdit()">Edit Price</button>
+    </ng-container>
+    <ng-template #buttonEditable>
+      <button type="button" class="btn btn-outline-success" mdbRipple rippleColor="dark" (click)="onChangePricing()">Save Changes</button>
+    </ng-template>
+  </div>
+</div>
+
+

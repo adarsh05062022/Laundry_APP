@@ -1,0 +1,52 @@
+<div class="card m-3">
+  <div class="innerWrapper w-100 g-0">
+    <div class="p-2 pricing">
+      <div class="details">
+        <div class="userDetails">
+          <div class="inputFields">
+            <label for="username">Name</label>
+            <input name="username" class="input" type="text" [(ngModel)]="userDetails.username"
+              [disabled]="!isPersonalDetailEditable" />
+          </div>
+          <div class="inputFields">
+            <label for="phone">Phone No </label>
+            <input name="phone" type="text" [(ngModel)]="userDetails.phone" [disabled]="!isPersonalDetailEditable" />
+          </div>
+
+
+        </div>
+
+        <div class="address">
+          <div class="inputFields">
+            <label for="address">Address</label>
+            <textarea name="address" type="text" rows="6" [(ngModel)]="userDetails.address"
+              [disabled]="!isPersonalDetailEditable"></textarea>
+          </div>
+        </div>
+
+        <span class="editButton">
+          <ng-container *ngIf="!isPersonalDetailEditable; else makeSave">
+            <i class="fas fa-edit" (click)="editButtonClicked()"></i>
+          </ng-container>
+
+          <ng-template #makeSave>
+            <i class="fas fa-check" (click)="updateDetails()"></i>
+          </ng-template>
+        </span>
+      </div>
+
+      <app-pricing></app-pricing>
+    </div>
+    <div class="chart">
+      <div class="card-body chartInner">
+        <canvas baseChart [type]="'pie'" [datasets]="pieChartDatasets" [labels]="pieChartLabels"
+          [options]="pieChartOptions" [plugins]="pieChartPlugins" [legend]="pieChartLegend">
+        </canvas>
+      </div>
+    </div>
+
+    <button class="feedbackButton btn btn-primary" (click)="openFeedbackModel()">
+      Feedback
+    </button>
+  </div>
+</div>

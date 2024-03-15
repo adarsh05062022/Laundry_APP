@@ -1,0 +1,50 @@
+/* Optional: Add your custom styles here */
+.container-fluid {
+  margin-top: 20px;
+}
+
+.text-center {
+  text-align: center;
+}
+
+.table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+.table th,
+.table td {
+  padding: 8px;
+  border: 1px solid #ccc;
+}
+
+.table th {
+  background-color: #f2f2f2;
+  font-weight: bold;
+}
+
+.table input[type="number"] {
+  width: 80px;
+  border: none;
+  background-color: #ccc;
+}
+
+.table input[type="number"]:disabled {
+  background-color: #fff;
+}
+
+td,th{
+  text-align: center;
+}
+
+
+
+/* Styles for screens smaller than 768px */
+@media screen and (max-width: 400px) {
+  th{
+    word-break: break-all !important;
+  }
+  input{
+    width: 25px !important;
+  }
+}

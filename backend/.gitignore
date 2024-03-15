@@ -1,0 +1,12 @@
+# Ignore node_modules directory
+node_modules/
+
+# Ignore logs
+logs/
+
+# Ignore configuration files containing sensitive information
+config/*.conf
+
+# Ignore IDE specific files
+.vscode/
+.idea/

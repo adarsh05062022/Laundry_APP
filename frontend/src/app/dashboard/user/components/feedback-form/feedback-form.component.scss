@@ -1,0 +1,14 @@
+.modal-body{
+        // width: fit-content;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        textarea{
+                width:100%;
+                padding: 20px;
+                border: none;
+                background-color: rgb(233, 233, 233);
+                border-radius: 10px;
+        }
+}
+

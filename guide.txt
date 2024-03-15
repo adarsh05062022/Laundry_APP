@@ -1,0 +1,23 @@
+step 1 - unzip the file
+
+
+
+step 2 - go to backend folder open in terminal and enter command ->  npm install --force
+
+     to run the backend ->  npm start
+
+
+
+step 2 - go to frontend folder open in terminal and enter command ->  npm install --force
+
+     to run the frontend -> ng serve -
+
+
+
+
+
+prerequisites :- 
+
+angular installed
+nodeJs installed
+mongoDb installed

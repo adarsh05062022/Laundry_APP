@@ -1,0 +1,79 @@
+<div class="conatiner-fluid p-3 dashboard">
+        <div class="row">
+          <!--====== left section==========-->
+      
+          <div class="col-12 col-lg-12 col-sm-12">
+            <div class="row">
+              <div class="col-md-12 col-lg-12">
+                <div class="row">
+                  <div class="c-dashboardInfo col-lg-3">
+                    <div class="wrap">
+                      <h4
+                        class="heading heading5 hind-font medium-font-weight c-dashboardInfo__title"
+                      >
+                      New Requests
+                        
+                      </h4>
+                      <span class="hind-font caption-12 c-dashboardInfo__count"
+                        >{{noOfRequests}}</span
+                      >
+                    </div>
+                  </div>
+                  <div class="c-dashboardInfo col-lg-3">
+                    <div class="wrap">
+                      <h4
+                        class="heading heading5 hind-font medium-font-weight c-dashboardInfo__title"
+                      >
+                        In processing requests
+                      </h4>
+                      <span class="hind-font caption-12 c-dashboardInfo__count"
+                        >{{noOfProcessing}}</span
+                      >
+                    </div>
+                  </div>
+                  <div class="c-dashboardInfo col-lg-3">
+                    <div class="wrap">
+                      <h4
+                        class="heading heading5 hind-font medium-font-weight c-dashboardInfo__title"
+                      >
+                        Revenue
+                      </h4>
+                      <span class="hind-font caption-12 c-dashboardInfo__count"
+                        >₵ {{totalRevenue}}</span
+                      >
+                    </div>
+                  </div>
+                  <div class="c-dashboardInfo col-lg-3">
+                    <div class="wrap">
+                      <h4
+                        class="heading heading5 hind-font medium-font-weight c-dashboardInfo__title"
+                      >
+                        Total Orders Completed
+                      </h4>
+                      <span class="hind-font caption-12 c-dashboardInfo__count"
+                        >{{noOfDelivered}}</span
+                      >
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="col-md-12 col-lg-6 mt-3">
+                <div class="card p-3">
+                  <app-pricing></app-pricing>
+                </div>
+              </div>
+              <div class="col-md-12 col-lg-6 mt-3">
+                <div class="card p-3 ">
+                  <!-- <h3 class=" mt-6 mb-4">Recent Transactions</h3> -->
+                   <app-chart-view></app-chart-view>
+                  
+                </div>
+              </div>
+            </div>
+          </div>
+      
+          <!--====== right section==========-->
+         
+        </div>
+      </div>
+      

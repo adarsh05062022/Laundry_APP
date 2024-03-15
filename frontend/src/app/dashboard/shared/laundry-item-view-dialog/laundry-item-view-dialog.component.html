@@ -1,0 +1,250 @@
+<div class="modal-header">
+  <h5 class="modal-title" id="exampleModalLabel">Laundry Details</h5>
+  <button
+    type="button"
+    class="btn-close"
+    aria-label="Close"
+    (click)="modalRef.close()"
+  ></button>
+</div>
+<div class="modal-body">
+   
+<mdb-tabs class="text-center" [fill]="true">
+  <mdb-tab title="Personal Details">
+    <div class="row">
+      <div class="col-md-12">
+        <label for="name">Name</label>
+        <input
+          name="name"
+          type="text"
+          class="form-control"
+          [(ngModel)]="laundryEntry.name"
+          required
+          [disabled]="isAdmin || laundryEntry.status !== 'requested'"
+        />
+      </div>
+      <div class="col-md-12">
+        <label for="phone">Phone no</label>
+        <input
+          name="phone"
+          type="text"
+          class="form-control"
+          [(ngModel)]="laundryEntry.phone"
+          required
+          [disabled]="isAdmin || laundryEntry.status !== 'requested'"
+        />
+      </div>
+      <div class="col-md-12">
+        <label for="pickupDate">Pickup date</label>
+        <input
+          name="pickupDate"
+          type="date"
+          class="form-control"
+          [(ngModel)]="laundryEntry.pickupDate"
+          required
+          [disabled]="isAdmin || laundryEntry.status !== 'requested'"
+        />
+      </div>
+      <div class="col-md-12">
+        <label for="address">Address</label>
+        <input
+          name="address"
+          type="text"
+          class="form-control"
+          [(ngModel)]="laundryEntry.address"
+          required
+          [disabled]="isAdmin || laundryEntry.status !== 'requested'"
+        />
+      </div>
+    </div>
+  </mdb-tab>
+  <mdb-tab title="Laundry Details">
+    <div class="row">
+      <div class="col-md-12">
+        <h3 class="category">Regular :</h3>
+        <div class="row">
+          <div class="col-md-6">
+            <label for="regularUpperWear"
+              >Upperwear <br/> (<span class="categoryExamples">shirt,t-shirt</span
+              >)</label
+            >
+            <input
+              name="regularUpperWear"
+              type="number"
+              class="form-control"
+              [(ngModel)]="laundryEntry.cloths.regular.upperWear"
+              required
+              min="0"
+              [disabled]="isAdmin || laundryEntry.status !== 'requested'"
+            />
+          </div>
+          <div class="col-md-6">
+            <label for="regularLowerWear"
+              >Lowerwear <br/> (<span class="categoryExamples">jeans,pants</span
+              >)</label
+            >
+            <input
+              name="regularLowerWear"
+              type="number"
+              class="form-control"
+              [(ngModel)]="laundryEntry.cloths.regular.lowerWear"
+              required
+              min="0"
+              [disabled]="isAdmin || laundryEntry.status !== 'requested'"
+            />
+          </div>
+        </div>
+      </div>
+      <div class="col-md-12">
+        <h3 class="category">Speciality :</h3>
+        <div class="row">
+          <div class="col-md-6">
+            <label for="specialUpperWear"
+              >Upperwear <br/>(<span class="categoryExamples"
+                >blazer,silk blouse</span
+              >)</label
+            >
+            <input
+              name="specialUpperWear"
+              placeholder=""
+              type="number"
+              class="form-control"
+              [(ngModel)]="laundryEntry.cloths.special.upperWear"
+              required
+              min="0"
+              [disabled]="isAdmin || laundryEntry.status !== 'requested'"
+            />
+          </div>
+          <div class="col-md-6">
+            <label for="specialLowerWear"
+              >Lowerwear <br/>(<span class="categoryExamples"
+                >Tailored trousers,skirt</span
+              >)</label
+            >
+            <input
+              name="specialLowerWear"
+              type="number"
+              class="form-control"
+              [(ngModel)]="laundryEntry.cloths.special.lowerWear"
+              required
+              min="0"
+              [disabled]="isAdmin || laundryEntry.status !== 'requested'"
+            />
+          </div>
+        </div>
+      </div>
+      <div class="col-md-12">
+        <h3 class="category">Woolen :</h3>
+        <div class="row">
+          <div class="col-md-6">
+            <label for="woolenUpperWear"
+              >Upperwear <br/>(<span class="categoryExamples">
+                Wool overcoat,sweater</span
+              >)</label
+            >
+            <input
+              name="woolenUpperWear"
+              type="number"
+              class="form-control"
+              [(ngModel)]="laundryEntry.cloths.woolen.upperWear"
+              required
+              min="0"
+              [disabled]="isAdmin || laundryEntry.status !== 'requested'"
+            />
+          </div>
+          <div class="col-md-6">
+            <label for="woolenLowerWear"
+              >Lowerwear <br/>(<span class="categoryExamples"
+                >woolen trouser</span
+              >)</label
+            >
+            <input
+              name="woolenLowerWear"
+              type="number"
+              class="form-control"
+              [(ngModel)]="laundryEntry.cloths.woolen.lowerWear"
+              required
+              min="0"
+              [disabled]="isAdmin || laundryEntry.status !== 'requested'"
+            />
+          </div>
+        </div>
+      </div>
+
+      <div class="col-md-12">
+        <h3 class="category">Household</h3>
+        <div class="row">
+          <div class="col-md-6">
+            <label for="housholdItems"
+              >items <br/>(<span class="categoryExamples">
+                sheets, carpet etc</span
+              >)</label
+            >
+            <input
+              name="housholdItems"
+              type="number"
+              class="form-control"
+              [(ngModel)]="laundryEntry.cloths.household.item"
+              required
+              min="0"
+              [disabled]="isAdmin || laundryEntry.status !== 'requested'"
+            />
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="form-group">
+      <label for="deliveryOption">Delivery Option</label>
+      <select
+        name="deliveryOption"
+        id="deliveryOption"
+        class="form-control"
+        [(ngModel)]="laundryEntry.deliveryOption"
+        required
+        [disabled]="isAdmin || laundryEntry.status !== 'requested'"
+      >
+        <option value="normal">Normal Delivery</option>
+        <option value="fast">Fast Delivery</option>
+      </select>
+    </div>
+    <div class="col-md-12 row">
+      <div class="col-md-6">
+        <label for="totalAmmount">Total Ammount:</label>
+        <input
+          type="number"
+          id="totalAmmount"
+          name="totalAmmount"
+          class="form-control"
+          [value]="calculateAmount"
+          required
+          [disabled]="true"
+        />
+      </div>
+    </div>
+  </mdb-tab>
+</mdb-tabs>
+</div>
+
+
+
+
+<ng-container *ngIf="!isAdmin && laundryEntry.status === 'requested'">
+  <div class="modal-footer">
+    <button
+      type="button"
+      class="btn btn-danger"
+      (click)="deleteLaundryRequest(laundryEntry)"
+    >
+      Delete
+    </button>
+    <button
+      type="button"
+      class="btn btn-primary"
+      [disabled]="!isFormValid"
+      (click)="updateLaundryRequest(laundryEntry)"
+    >
+      Save changes
+    </button>
+  </div>
+</ng-container>

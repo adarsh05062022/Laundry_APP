@@ -1,20 +1,21 @@
 import { Component } from '@angular/core';
-import { AppValidatorService } from './app-validator.service';
 import { Router } from '@angular/router';
+import { AppValidatorService } from 'src/app/app-validator.service';
 
 @Component({
-  selector: 'app-root',
-  templateUrl: './app.component.html',
-  styleUrls: ['./app.component.scss'],
+  selector: 'app-home-page',
+  templateUrl: './home-page.component.html',
+  styleUrls: ['./home-page.component.scss']
 })
-export class AppComponent {
-  title = 'my-laundry';
+export class HomePageComponent {
   isLoggedIn: boolean = false;
 
   constructor(
     private appValidatorService: AppValidatorService,
     private router: Router
-  ) {}
+  ) {
+    // this.router.navigate(['/'])
+  }
 
   /**
    * The ngOnInit function checks if the user is logged in and then performs a specific action.

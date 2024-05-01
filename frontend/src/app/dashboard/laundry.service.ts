@@ -73,7 +73,8 @@ class LaundryService {
     },
   };
 
-  baseUrl: string = 'https://mylaundry-backend.onrender.com/api/';
+  
+  baseUrl: string = 'http://localhost:3000/api/';
 
   
 

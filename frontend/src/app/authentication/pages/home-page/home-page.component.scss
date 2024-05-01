@@ -1,0 +1,36 @@
+.intro-header {
+    min-height: 200vh;
+    // padding-top: 50px;
+    text-align: center;
+    background: #FFFFFF;
+    background-size: cover;
+    background: url("../../../../assets/image/laundry.png");
+    background-size: cover;
+    // background-position: center;
+    background-repeat: no-repeat;
+    // height: 100%;
+
+    overflow: auto; /* Allow scrolling */
+    position: relative;
+    overflow: scroll;
+}
+
+#button {
+    background: #FD7EA3;
+    border: none;
+    border-radius: 0;
+    border-bottom: 6px solid #ED7698;
+    padding: 15px 30px;
+    font-size: 18px;
+    color: #fff;
+    cursor: pointer;
+    position: absolute;
+    bottom: 20px; /* Adjust this value as needed */
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+#button:hover {
+    background: #4EBAAF;
+    border-bottom: 6px solid #52CABF;
+}

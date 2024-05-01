@@ -1,31 +1,44 @@
-🧺 Laundry App
-Welcome to the Laundry App! This is a full-stack application where users can conveniently manage their laundry needs, and admins can efficiently handle laundry services and orders.
+# 🧺 Laundry App
 
-Prerequisites
-Before getting started, make sure you have the following installed:
+Welcome to the Laundry App! Manage your laundry needs efficiently with our full-stack application.
 
-Angular 💻
-Node.js 🚀
-MongoDB 📦
-Getting Started
-Step 1: Unzip the File
-📂 Unzip the downloaded file to get started with the setup.
+## Prerequisites
 
-Step 2: Backend Setup
-Navigate to the backend folder in your terminal.
-Run the command npm install --force to install dependencies.
-To start the backend server, run npm start.
-Step 3: Frontend Setup
-Navigate to the frontend folder in your terminal.
-Run the command npm install --force to install dependencies.
-To start the frontend server, run ng serve.
-Features
-Customer Portal: 🙋‍♂️ Customers can easily create laundry service requests.
-Admin Dashboard: 👩‍💼 Admins have access to efficiently manage laundry services and orders.
-Integration: 🛠 Integration of charges and ngx-toaster modules for enhanced functionality.
-Database: 💾 MongoDB is used as the database.
-Contributing
-🤝 Contributions are welcome! Please fork this repository and create a pull request.
+Before diving in, ensure you have the following set up:
 
-License
-This project is licensed under the MIT License.
+- Angular 💻
+- Node.js 🚀
+- MongoDB 📦
+
+## Getting Started
+
+### Step 1: Unzip the File
+
+- Unzip the downloaded file to get started with the setup.
+
+### Backend Setup
+
+1. Navigate to the `backend` folder in your terminal.
+2. Run `npm install --force` to install dependencies.
+3. Start the backend server with `npm start`.
+
+### Frontend Setup
+
+1. Navigate to the `frontend` folder in your terminal.
+2. Run `npm install --force` to install dependencies.
+3. Start the frontend server with `ng serve`.
+
+## Features
+
+- **Customer Portal**: 🙋‍♂️ Easily create laundry service requests.
+- **Admin Dashboard**: 👩‍💼 Manage laundry services and orders efficiently.
+- **Integration**: 🛠 Integration of charges and ngx-toaster modules for enhanced functionality.
+- **Database**: 💾 MongoDB used as the database.
+
+## Contributing
+
+🤝 Contributions are welcome! Fork this repository and create a pull request.
+
+## License
+
+This project is licensed under the [MIT License](LICENSE).

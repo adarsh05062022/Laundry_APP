@@ -16,7 +16,12 @@ export class ResetPasswordComponent {
     private authServices: AuthenticationService,
     private toastr: ToastrService,
     private router: Router
-  ) {}
+  ) {
+
+    this.toastr.warning("You are not able to change the password 🥲","",{
+      timeOut:5000
+    })
+  }
 
   changePassword() {
     // You can send a request to your server to change the password here

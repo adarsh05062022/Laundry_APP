@@ -12,10 +12,9 @@ export class AuthenticationService {
   private loggedInSubject = new BehaviorSubject<boolean>(false);
   public loggedIn$ = this.loggedInSubject.asObservable();
 
-  
-
   url: string = 'http://localhost:3000/api/auth';
 
+  
 
   constructor(private http: HttpClient) {}
 

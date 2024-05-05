@@ -1,0 +1,15 @@
+/* Custom CSS for horizontal scrolling */
+.overflow-auto {
+        overflow-x: auto;
+      }
+      
+      @media (max-width: 576px) {
+        .container {
+          max-width: 400px;
+        }
+      }
+      @media (max-width: 400px) {
+        .container {
+          max-width: 340px;
+        }
+      }

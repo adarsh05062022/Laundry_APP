@@ -26,6 +26,11 @@ export class LoginComponent implements OnInit {
       email: ['', [Validators.required, Validators.email]],
       password: ['', [Validators.required]],
     });
+
+
+    this.toastr.warning("We are using free API services so requests are slow 🥲","",{
+      timeOut:5000
+    })
   }
 
  /**

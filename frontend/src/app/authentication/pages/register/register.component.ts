@@ -45,6 +45,11 @@ export class RegisterComponent implements OnInit {
       role: ['customer', Validators.required], // Default role is 'customer'
     });
 
+
+    this.toastr.warning("You are not able to register It's a demo app 🥲","",{
+      timeOut:5000
+    })
+
     // Disable the role select element
     // this.registrationForm.get('role')?.disable()
   }

@@ -53,8 +53,14 @@
           </div>
         </div>
         <div>
-          <button type="submit" class="btn text-white mt-3 shadow-lg" [disabled]="loginForm.invalid">
-            SIGN IN
+          <button type="submit" class="btn text-white loginButton mt-3 shadow-lg" [disabled]="loginForm.invalid || loadingSpinner" >
+            
+            <span *ngIf="!loadingSpinner">SIGN IN</span>
+
+            <span *ngIf="loadingSpinner" class="spinner-grow text-warning" role="status">
+              
+            </span>
+            <span *ngIf="loadingSpinner">Loading...</span>
           </button>
         </div>
         <p class="paragraph-link mt-4 mx-3">

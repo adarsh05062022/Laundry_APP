@@ -12,6 +12,7 @@ import { ToastrService } from 'ngx-toastr';
 })
 export class LoginComponent implements OnInit {
   loginForm!: FormGroup;
+  loadingSpinner:boolean = false;
 
   constructor(
     private formBuilder: FormBuilder,
@@ -46,10 +47,14 @@ export class LoginComponent implements OnInit {
       return;
     }
 
+    this.loadingSpinner = true;
+
     const userData = {
       email: this.loginForm.value.email,
       password: this.loginForm.value.password,
     };
+
+ 
 
    
 
@@ -74,11 +79,22 @@ export class LoginComponent implements OnInit {
         }
 
         this.toastr.success("User logged in successfully","",{timeOut:2000})
+
+
+        this.loadingSpinner = false;
       },
       (error) => {
         this.toastr.error("Error logging in user","",{timeOut:2000})
 
+
+        this.loadingSpinner = false;
+
       }
     );
+
+
+    
+
+    
   }
 }

@@ -30,6 +30,11 @@ app.use('/api/auth', authRoutes);
 app.use('/api/pricing',authenticateToken, pricingRoutes);
 app.use('/api/laundry',authenticateToken, laundryRoutes);
 
+
+app.get("/", (req, res) => {
+  res.send("Backend is running");
+});
+
 /* The `app.listen(PORT, () => { console.log("Server is running on port 3000"); });` code is starting
 the server and making it listen for incoming requests on the specified port. In this case, it is
 listening on port 3000. When the server starts running and is successfully listening on the
